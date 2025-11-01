@@ -44,12 +44,25 @@
       background: linear-gradient(90deg, #4caf50, #8bc34a);
     }
 
+    .student-id {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 14px;
+      color: #1a6b3b;
+      font-weight: bold;
+      background: #e8f5e9;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
     header {
       display: flex;
       align-items: center;
       padding-bottom: 20px;
       margin-bottom: 25px;
       border-bottom: 2px solid #e0f2e0;
+      margin-top: 20px;
     }
 
     header img {
@@ -247,27 +260,25 @@
 </head>
 <body>
   <div class="resume">
+    <div class="student-id">Student ID: 114035122</div>
+    
     <header>
-      <img src="1t.jpg" alt="Profile Photo">
+      <img src="1t.jpg" alt="Profile Photo of Erdenesaikhan">
       <div class="header-text">
         <h1>Erdenesaikhan</h1>
         <h2>Finance Student</h2>
         <div class="contact-info">
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
-            <span>Current Location</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>Phone Number</span>
+            <span>Asia University</span>
           </div>
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
-            <span>Email Address</span>
+            <span>114035122@live.asia.edu.tw</span>
           </div>
           <div class="contact-item">
             <i class="fab fa-linkedin"></i>
-            <span>LinkedIn</span>
+            <span>linkedin.com/in/erdenesaikhan</span>
           </div>
         </div>
       </div>
@@ -276,7 +287,7 @@
     <section>
       <h3><i class="fas fa-user"></i> Profile</h3>
       <p>
-        Motivated finance student with an international academic background. 
+        Motivated finance student with an international academic background at Asia University. 
         Passionate about financial management, investment strategies, and analytical problem solving. 
         Seeking opportunities to apply knowledge in real-world financial settings.
       </p>
@@ -286,18 +297,20 @@
       <h3><i class="fas fa-briefcase"></i> Experience</h3>
       <div class="experience-item">
         <strong>Finance Intern</strong> — Private Company <span class="tag">2024</span>
-        <div class="date">2024</div>
+        <div class="date">June 2024 - August 2024</div>
         <ul>
           <li>Assisted with data entry and basic financial reporting</li>
           <li>Supported analysis tasks and team projects</li>
+          <li>Participated in financial modeling and forecasting activities</li>
         </ul>
       </div>
       <div class="experience-item">
         <strong>Research Assistant</strong> — University Project <span class="tag">2025</span>
-        <div class="date">2025</div>
+        <div class="date">January 2025 - Present</div>
         <ul>
           <li>Helped in academic research related to corporate finance topics</li>
           <li>Presented findings in group seminars</li>
+          <li>Collected and analyzed financial data for research papers</li>
         </ul>
       </div>
     </section>
@@ -307,12 +320,13 @@
         <h3><i class="fas fa-graduation-cap"></i> Education</h3>
         <div class="education-item">
           <strong>Bachelor of Finance</strong>
-          <div>International University Program</div>
-          <div class="date">Ongoing</div>
+          <div>Asia University</div>
+          <div class="date">2023 - Present</div>
         </div>
         <div class="education-item">
           <strong>High School Diploma</strong>
-          <div class="date">Completed (Year)</div>
+          <div>Mongolian High School</div>
+          <div class="date">Graduated 2022</div>
         </div>
       </section>
 
@@ -321,7 +335,7 @@
         <div class="language-item">
           <div class="language-name">
             <span>Mongolian</span>
-            <span>Fluent</span>
+            <span>Native</span>
           </div>
           <div class="progress-bar">
             <div class="progress" style="width: 100%"></div>
@@ -334,6 +348,15 @@
           </div>
           <div class="progress-bar">
             <div class="progress" style="width: 70%"></div>
+          </div>
+        </div>
+        <div class="language-item">
+          <div class="language-name">
+            <span>Chinese</span>
+            <span>Basic</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 40%"></div>
           </div>
         </div>
       </section>
@@ -350,6 +373,8 @@
         <span>Teamwork</span>
         <span>Communication</span>
         <span>Time Management</span>
+        <span>Financial Reporting</span>
+        <span>Budgeting</span>
       </div>
     </section>
 
@@ -358,9 +383,26 @@
       <ul>
         <li>Preparing for financial analysis certification</li>
         <li>Case studies in business and finance courses</li>
+        <li>University finance competition participant (2024)</li>
       </ul>
     </section>
   </div>
+
+  <script>
+    // Simple script to handle image loading error
+    document.addEventListener('DOMContentLoaded', function() {
+      const profileImg = document.querySelector('header img');
+      
+      profileImg.addEventListener('error', function() {
+        console.log('Image failed to load. Please check the file path and name.');
+        // You could set a placeholder image here if needed
+        // this.src = 'placeholder.jpg';
+      });
+      
+      profileImg.addEventListener('load', function() {
+        console.log('Profile image loaded successfully');
+      });
+    });
+  </script>
 </body>
 </html>
-
